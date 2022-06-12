@@ -1,0 +1,59 @@
+.list {
+  max-width: 400px;
+  list-style: none;
+}
+
+.list img {
+  width: 100%;
+}
+
+.list li {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 20px 0;
+}
+
+.avatarContainer {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatarContainer img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.avatarContainer p {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.descriptionContainer {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.likesContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.likesContainer button{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 30px 0 30px;
+}
+.likesContainer img {
+  width: 40px;
+}
+.liked {
+  background: lightblue;
+}

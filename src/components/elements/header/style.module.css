@@ -1,0 +1,28 @@
+.header {
+  height: 40px;
+  padding: 5px 10px;
+  background: #eee;
+}
+.headerContainer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  text-decoration: none;
+}
+
+.header a {
+  display: inline-block;
+  color: #000;
+}
+
+.title {
+  font-size: 1.25em;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}

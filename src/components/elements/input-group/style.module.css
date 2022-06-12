@@ -1,0 +1,18 @@
+.inputContainer {
+  margin: 10px 0;
+  max-width: 200px;
+}
+
+.label {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.input {
+  display: block;
+  padding: 4px;
+  font-size: 18px;
+  border-radius: 4px;
+  margin-top: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
