@@ -88,7 +88,7 @@ function Login() {
                 UserLogin === "login error user not logged in"
               )}
               {UserLogin === "login success" ? (
-                <p className="success">Zostałeś zalogowany</p>
+                <p className="success">Zostałeś zalogowany <br /> <Link to="/ap">dodaj post</Link></p>
               ) : (
                 UserLogin === "login error user not logged in"
               )}

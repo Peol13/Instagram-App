@@ -13,7 +13,6 @@ function CreateProfile() {
   const [SurnameInputValue, setSurnameInputValue] = useState("");
   const [NickInputValue, setNickInputValue] = useState("");
   const [AvatarInputValue, setAvatarInputValue] = useState("");
-
   const [PasswordInputValue, setPasswordInputValue] = useState("");
   const [UserCreate, setUserCreate] = useContext(Context);
 
@@ -188,9 +187,9 @@ function CreateProfile() {
 
             {UserCreate === "error wrong avatar url format" ? (
               <p>
-                Błędny format URL URL powinno zaczynać się od http:\\ lub https:\\ Adres domyślnego
-                Avatara:
-                https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/User_icon_1.svg/1024px-User_icon_1.svg.png
+                Błędny format URL. URL powinno zaczynać się od http:\\ lub https:\\ Spróbuj ponownie lub wklej adres domyślnego
+                avatara:
+                https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/User_font_awesome.svg/2048px-User_font_awesome.svg.png
               </p>
             ) : (
               UserCreate === "don't create account"

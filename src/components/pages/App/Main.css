@@ -12,15 +12,15 @@
 .App-header {
   background-color: #282c34;
   min-height: 70vh;
-  width: 80vw;
-  margin: 20px auto;
+
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding-bottom: 30px;
-  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  word-wrap: break-word;
 }
 .reload {
   text-decoration: none;
@@ -42,6 +42,8 @@ form {
 
 .error_message p {
   color: red;
+  font-size: 18px;
+  line-height: 30px;
 }
 .success {
   color: cyan !important;
@@ -59,11 +61,13 @@ a {
   background-color: aliceblue;
   color: black;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 .post-img {
   width: 100%;
   height: 200px;
   align-items: center;
+  margin: 10px 0;
 }
 .header-post {
   display: flex;
@@ -97,8 +101,8 @@ a {
 i {
   text-decoration: none;
 }
-.description{
-font-size: 16px;
+.description {
+  font-size: 16px;
 }
 
 @keyframes App-logo-spin {
@@ -112,5 +116,12 @@ font-size: 16px;
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .App-header {
+    width: auto;
+    margin: 0;
   }
 }
