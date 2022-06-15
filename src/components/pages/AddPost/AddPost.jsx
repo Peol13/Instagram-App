@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
-
+import { Link } from "react-router-dom";
+import "./AddPost.css"
 import Footer from "../../layouts/Footer";
 import Header from "../../layouts/Header";
 import Button from "../../elements/Button";
@@ -43,23 +44,15 @@ function AddPost() {
 
     if (titleInputValue === "" || descriptionInputValue === "" || imgInputValue === ""){
       setIsPostAdded("0");
-     setDescriptionInputValue("");
-      setTitleInputValue("");
-      setImgInputValue("");
       event.preventDefault();
     }
-    else if(titleInputValue.length <= 3 || descriptionInputValue.length <= 6 ){
-      setIsPostAdded("1");
-      setDescriptionInputValue("");
-       setTitleInputValue("");
-       setImgInputValue("");
+    else if(titleInputValue.length <= 3 || descriptionInputValue.length <= 3 ){
+       setIsPostAdded("1");
        event.preventDefault();
     }
     else if(!reImgURL.test(imgInputValue)){
       setIsPostAdded("2");
-      setDescriptionInputValue("");
-       setTitleInputValue("");
-       setImgInputValue("");
+  
        event.preventDefault();
     }
    
@@ -113,13 +106,14 @@ function AddPost() {
               inputValue={descriptionInputValue}
             />
             <Button btnType="submit">Dodaj post</Button>
+             <span className="Form_link"><Link to="/">Zobacz posty</Link></span>
 
             <div className="error_message">
               {isPostAdded === "0" ? <p>Wypełnij wszystkie pola</p> : isPostAdded === ""}
 
            
 
-              {isPostAdded === "1" ? <p>Tytuł powinien zawierać  <br /> minimum 3 znaki a opis 6</p> : isPostAdded === ""}
+              {isPostAdded === "1" ? <p>Tytuł i opis powinny zawierać  <br /> minimum 3 znaki</p> : isPostAdded === ""}
                  {isPostAdded === "2" ? <p>Niepoprawny format URL <br /> szukaj dalej<br /> lub wklej ten link: <a href="https://www.josera.pl/media/porady-dla-kota-na-lato.jpg">kotek </a> </p> : isPostAdded === ""}
               {isPostAdded === "3" ? (
                 <p className="success">Post został dodany</p>
@@ -127,6 +121,7 @@ function AddPost() {
                 isPostAdded === ""
               )}
             </div>
+               
           </form>
         </header>
       </div>

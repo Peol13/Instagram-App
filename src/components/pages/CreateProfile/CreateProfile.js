@@ -187,9 +187,9 @@ function CreateProfile() {
 
             {UserCreate === "error wrong avatar url format" ? (
               <p>
-                Błędny format URL. URL powinno zaczynać się od http:\\ lub https:\\ Spróbuj ponownie lub wklej adres domyślnego
-                avatara:
-                https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/User_font_awesome.svg/2048px-User_font_awesome.svg.png
+                Błędny format URL. URL powinno zaczynać się od http:\\ lub https:\\ <br></br> Spróbuj ponownie lub wklej domyślny  <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/User_font_awesome.svg/2048px-User_font_awesome.svg.png"> avatar</a> 
+              
+                
               </p>
             ) : (
               UserCreate === "don't create account"
